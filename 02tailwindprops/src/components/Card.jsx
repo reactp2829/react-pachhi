@@ -1,5 +1,5 @@
 import React from 'react'
-
+ 
 function Card({userDetails,btnText = "Visit Me"}) {
     return (
 <div className="cookieCard">
