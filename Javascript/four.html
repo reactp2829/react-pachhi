@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <ul class="lang">
+            <li>Javascript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    function addLang(langName){
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+        document.querySelector(".lang").appendChild(li)
+    }
+    addLang("php")
+    addLang("goLang")
+
+    function optimiseAddlang(lang){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector(".lang").appendChild(li)
+    }
+    optimiseAddlang('react')
+    optimiseAddlang('node js')
+
+//edit 3rd child 
+const thchild = document.querySelector('li:nth-child(3)')
+//console.log(thchild); 
+thchild.innerHTML = "c++"
+
+//edit
+const secondli = document.querySelector('li:nth-child(2)')
+const newLi = document.createElement('li')
+newLi.textContent = 'Mysql';
+secondli.replaceWith(newLi);
+
+// remove last elemnt
+const lastelemnt = document.querySelector('li:last-child')
+lastelemnt.remove()
+</script>
+</html>
